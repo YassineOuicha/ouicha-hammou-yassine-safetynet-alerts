@@ -25,7 +25,6 @@ public class DataRepository {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             File file  = new File("ata.json");
-
             DataRepository data = objectMapper.readValue(file, DataRepository.class);
             this.persons = data.getPersons();
             this.fireStations = data.getFireStations();
