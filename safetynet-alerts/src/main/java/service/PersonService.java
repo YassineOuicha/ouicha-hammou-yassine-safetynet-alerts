@@ -11,11 +11,15 @@ import java.util.List;
 public class PersonService {
 
     @Autowired
-    private DataRepository dataRepository;
+    private DataService dataService;
 
     public List<Person> getAllPersons(){
-        return dataRepository.getPersons();
+        DataRepository dataRepository = dataService.getData();
+
+        return dataService.getData().getPersons();
     }
+
+
 
 }
 

@@ -11,9 +11,11 @@ import java.util.List;
 public class FireStationService {
 
     @Autowired
-    private DataRepository dataRepository;
+    private DataService dataService;
 
     public List<FireStation> getAllFireStations(){
+        DataRepository dataRepository = dataService.getData();
+
         return dataRepository.getFireStations();
     }
 
