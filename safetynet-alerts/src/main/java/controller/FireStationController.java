@@ -16,7 +16,7 @@ public class FireStationController {
     @Autowired
     private FireStationService fireStationService;
 
-    @GetMapping
+    @GetMapping("/firestations")
     public List<FireStation> getAllFireStations(){
         return fireStationService.getAllFireStations();
     }
