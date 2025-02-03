@@ -19,9 +19,9 @@ public class FireStationController {
     }
 
     @GetMapping
-    public FireStation getFireStation(@RequestParam Integer station){
+    public FireStation getFireStation(@RequestParam String station){
         return fireStationService.getFireStation(station)
-                .orElseThrow(()-> new RuntimeException("Fire Station nor found"));
+                .orElseThrow(()-> new RuntimeException("Fire Station not found"));
     }
 
     @PostMapping("/add")

@@ -23,8 +23,8 @@ public class FireStationService {
         return dataRepository.getFireStations();
     }
 
-    public Optional<FireStation> getFireStation(int station){
-        return getAllFireStations().stream().filter(fs -> (fs.getStation() == station)).findFirst();
+    public Optional<FireStation> getFireStation(String station){
+        return getAllFireStations().stream().filter(fs -> (fs.getStation().equalsIgnoreCase(station))).findFirst();
     }
 
     public FireStation addFireStation(FireStation fireStation){
@@ -45,7 +45,7 @@ public class FireStationService {
     }
 
     public boolean deleteFireStation(FireStation fireStation){
-        return getAllFireStations().removeIf(fs -> fs.getStation() == fireStation.getStation());
+        return getAllFireStations().removeIf(fs -> fs.getStation().equalsIgnoreCase(fireStation.getStation()));
     }
 
 }

@@ -36,7 +36,8 @@ public class MedicalRecordController {
     }
 
     @DeleteMapping("/delete")
-    public boolean deleteMedicalRecord(@RequestBody MedicalRecord medicalRecord){
+    public boolean deleteMedicalRecord(@RequestParam String firstName, @RequestParam String lastName){
+        MedicalRecord medicalRecord = getMedicalRecord(firstName, lastName);
         return medicalRecordService.deleteMedicalRecord(medicalRecord);
     }
 
