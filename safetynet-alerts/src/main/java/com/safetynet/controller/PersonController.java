@@ -1,14 +1,14 @@
-package controller;
+package com.safetynet.controller;
 
-import model.Person;
+import com.safetynet.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import service.PersonService;
+import com.safetynet.service.PersonService;
 
 import java.util.List;
 
-@RequestMapping("/person")
 @RestController
+@RequestMapping("/person")
 public class PersonController {
 
     @Autowired

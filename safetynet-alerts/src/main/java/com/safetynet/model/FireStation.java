@@ -1,4 +1,4 @@
-package model;
+package com.safetynet.model;
 
 
 import lombok.Data;

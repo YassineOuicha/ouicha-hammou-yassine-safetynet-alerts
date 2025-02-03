@@ -1,9 +1,9 @@
-package controller;
+package com.safetynet.controller;
 
-import model.MedicalRecord;
+import com.safetynet.model.MedicalRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import service.MedicalRecordService;
+import com.safetynet.service.MedicalRecordService;
 
 import java.util.List;
 

@@ -1,9 +1,9 @@
-package service;
+package com.safetynet.service;
 
-import model.FireStation;
+import com.safetynet.model.FireStation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.DataRepository;
+import com.safetynet.repository.DataRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public class FireStationService {
 
     public List<FireStation> getAllFireStations(){
         DataRepository dataRepository = dataService.getData();
-        return dataRepository.getFireStations();
+        return dataRepository.getFirestations();
     }
 
     public Optional<FireStation> getFireStation(String station){
@@ -32,7 +32,7 @@ public class FireStationService {
         if(existingFireStation.isPresent()){
             throw new RuntimeException("This FireStation exists already");
         }
-        dataService.getData().getFireStations().add(fireStation);
+        dataService.getData().getFirestations().add(fireStation);
         return fireStation;
     }
 

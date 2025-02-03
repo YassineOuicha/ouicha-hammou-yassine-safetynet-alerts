@@ -1,10 +1,10 @@
-package service;
+package com.safetynet.service;
 
 
-import model.MedicalRecord;
+import com.safetynet.model.MedicalRecord;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.DataRepository;
+import com.safetynet.repository.DataRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public class MedicalRecordService {
 
     public List<MedicalRecord> getAllMedicalRecords(){
         DataRepository dataRepository = dataService.getData();
-        return dataRepository.getMedicalRecords();
+        return dataRepository.getMedicalrecords();
     }
 
     public Optional<MedicalRecord> getMedicalRecord(String firstName, String lastName){
@@ -44,7 +44,7 @@ public class MedicalRecordService {
         MedicalRecord outDatedMedicalRecord = getMedicalRecord(updatedMedicalRecord.getFirstName(), updatedMedicalRecord.getLastName())
                 .orElseThrow(()-> new RuntimeException("Medical record not found"));
         outDatedMedicalRecord.setMedications(updatedMedicalRecord.getMedications());
-        outDatedMedicalRecord.setBirthDate(updatedMedicalRecord.getBirthDate());
+        outDatedMedicalRecord.setBirthdate(updatedMedicalRecord.getBirthdate());
         outDatedMedicalRecord.setAllergies(updatedMedicalRecord.getAllergies());
         return true;
     }

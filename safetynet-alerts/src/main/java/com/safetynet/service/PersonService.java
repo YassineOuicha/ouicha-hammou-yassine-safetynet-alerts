@@ -1,9 +1,9 @@
-package service;
+package com.safetynet.service;
 
-import model.Person;
+import com.safetynet.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repository.DataRepository;
+import com.safetynet.repository.DataRepository;
 
 import java.util.List;
 import java.util.Optional;

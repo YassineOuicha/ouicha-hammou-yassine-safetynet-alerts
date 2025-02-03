@@ -1,9 +1,9 @@
-package service;
+package com.safetynet.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
-import repository.DataRepository;
+import com.safetynet.repository.DataRepository;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,7 +17,7 @@ public class DataService {
     public void LoadData(){
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            File file  = new File("src/main/resources/data.json");
+            File file  = new File("C:/Users/User/OneDrive/Desktop/Y.Ouicha/OpenClassrooms/Projet_N5/ouicha-hammou-yassine-safetynet-alerts/safetynet-alerts/src/main/resources/data.json");
             dataRepository = objectMapper.readValue(file, DataRepository.class);
             System.out.println("JSON Data has been uploaded successfully");
         } catch (IOException e) {

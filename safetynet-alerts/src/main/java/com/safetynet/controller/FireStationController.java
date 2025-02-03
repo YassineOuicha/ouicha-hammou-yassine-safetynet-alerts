@@ -1,9 +1,9 @@
-package controller;
+package com.safetynet.controller;
 
-import model.FireStation;
+import com.safetynet.model.FireStation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import service.FireStationService;
+import com.safetynet.service.FireStationService;
 import java.util.List;
 
 @RequestMapping("/firestation")

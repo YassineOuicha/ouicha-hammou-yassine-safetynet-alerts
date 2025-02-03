@@ -1,4 +1,4 @@
-package model;
+package com.safetynet.model;
 
 import lombok.Data;
 import lombok.Getter;
@@ -11,7 +11,7 @@ public class MedicalRecord {
 
     private String firstName;
     private String lastName;
-    private String birthDate;
+    private String birthdate;
     private List<String> medications;
     private List<String> allergies;
 
@@ -32,12 +32,12 @@ public class MedicalRecord {
         this.lastName = lastName;
     }
 
-    public String getBirthDate() {
-        return birthDate;
+    public String getBirthdate() {
+        return birthdate;
     }
 
-    public void setBirthDate(String birthDate) {
-        this.birthDate = birthDate;
+    public void setBirthdate(String birthdate) {
+        this.birthdate = birthdate;
     }
 
     public List<String> getMedications() {
