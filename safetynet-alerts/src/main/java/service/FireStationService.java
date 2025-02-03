@@ -24,7 +24,7 @@ public class FireStationService {
     }
 
     public Optional<FireStation> getFireStation(int station){
-        return getAllFireStations().stream().filter(f -> (f.getStation() == station)).findFirst();
+        return getAllFireStations().stream().filter(fs -> (fs.getStation() == station)).findFirst();
     }
 
     public FireStation addFireStation(FireStation fireStation){
@@ -36,16 +36,16 @@ public class FireStationService {
         return fireStation;
     }
 
-    public void upDateFireStation(FireStation updatedFireStation){
-
+    public boolean upDateFireStation(FireStation updatedFireStation){
         FireStation oldFireStation = getFireStation(updatedFireStation.getStation())
                 .orElseThrow(()-> new RuntimeException("Fire Station doesn't exists"));
         oldFireStation.setStation(updatedFireStation.getStation());
         oldFireStation.setAddress(updatedFireStation.getAddress());
+        return true;
     }
 
     public boolean deleteFireStation(FireStation fireStation){
-        return getAllFireStations().removeIf(f -> f.getStation() == fireStation.getStation());
+        return getAllFireStations().removeIf(fs -> fs.getStation() == fireStation.getStation());
     }
 
 }

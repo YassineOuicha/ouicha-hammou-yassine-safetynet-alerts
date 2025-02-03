@@ -40,7 +40,7 @@ public class PersonService {
         return person;
     }
 
-    public void updatePerson (Person updatedPerson){
+    public boolean updatePerson (Person updatedPerson){
         Person outDatedPerson = getPerson(updatedPerson.getFirstName(), updatedPerson.getLastName())
                 .orElseThrow(() -> new RuntimeException("Person not found"));
         outDatedPerson.setAddress(updatedPerson.getAddress());
@@ -48,6 +48,8 @@ public class PersonService {
         outDatedPerson.setPhone(updatedPerson.getPhone());
         outDatedPerson.setZip(updatedPerson.getZip());
         outDatedPerson.setEmail(updatedPerson.getEmail());
+
+        return true;
     }
 
     public boolean deletePerson (String firstName, String lastName){
