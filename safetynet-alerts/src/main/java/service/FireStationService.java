@@ -36,7 +36,7 @@ public class FireStationService {
         return fireStation;
     }
 
-    public boolean upDateFireStation(FireStation updatedFireStation){
+    public boolean updateFireStation(FireStation updatedFireStation){
         FireStation oldFireStation = getFireStation(updatedFireStation.getStation())
                 .orElseThrow(()-> new RuntimeException("Fire Station doesn't exists"));
         oldFireStation.setStation(updatedFireStation.getStation());
