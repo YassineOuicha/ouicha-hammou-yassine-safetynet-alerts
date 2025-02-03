@@ -2,8 +2,10 @@ package model;
 
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Data @Setter @Getter
 public class Person {
     private String firstName;
     private String lastName;
@@ -12,5 +14,6 @@ public class Person {
     private String zip;
     private String phone;
     private String email;
+
 
 }

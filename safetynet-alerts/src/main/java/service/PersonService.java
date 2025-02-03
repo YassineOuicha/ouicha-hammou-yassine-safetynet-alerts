@@ -6,20 +6,54 @@ import org.springframework.stereotype.Service;
 import repository.DataRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PersonService {
 
+    private final DataService dataService;
+
     @Autowired
-    private DataService dataService;
+    public PersonService(DataService dataService) {
+        this.dataService = dataService;
+    }
 
     public List<Person> getAllPersons(){
         DataRepository dataRepository = dataService.getData();
-
-        return dataService.getData().getPersons();
+        return dataRepository.getPersons();
     }
 
+    public Optional<Person> getPerson(String firstName, String lastName){
 
+        return getAllPersons().stream()
+                .filter(p -> p.getFirstName().equalsIgnoreCase(firstName)
+                && p.getLastName().equalsIgnoreCase(lastName))
+                .findFirst();
+    }
 
+    public Person addPerson(Person person){
+        Optional<Person> existingPerson = getPerson(person.getFirstName(), person.getLastName());
+        if(existingPerson.isPresent()){
+            throw new RuntimeException("This person already exists");
+        }
+        dataService.getData().getPersons().add(person);
+        return person;
+    }
+
+    public void updatePerson (Person updatedPerson){
+        Person outDatedPerson = getPerson(updatedPerson.getFirstName(), updatedPerson.getLastName())
+                .orElseThrow(() -> new RuntimeException("Person not found"));
+        outDatedPerson.setAddress(updatedPerson.getAddress());
+        outDatedPerson.setCity(updatedPerson.getCity());
+        outDatedPerson.setPhone(updatedPerson.getPhone());
+        outDatedPerson.setZip(updatedPerson.getZip());
+        outDatedPerson.setEmail(updatedPerson.getEmail());
+    }
+
+    public boolean deletePerson (String firstName, String lastName){
+
+        return  getAllPersons().removeIf(p-> p.getFirstName().equalsIgnoreCase(firstName)
+                && p.getLastName().equalsIgnoreCase(lastName));
+    }
 }
 
