@@ -1,27 +1,33 @@
 package com.safetynet.controller;
 
 import com.safetynet.model.FireStation;
+import com.safetynet.model.PersonFireStationDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.safetynet.service.FireStationService;
 import java.util.List;
 
-@RequestMapping("/firestation")
+@RequestMapping
 @RestController
 public class FireStationController {
 
     @Autowired
     private FireStationService fireStationService;
 
-    @GetMapping("/all")
+    @GetMapping("/firestations")
     public List<FireStation> getAllFireStations(){
         return fireStationService.getAllFireStations();
     }
 
     @GetMapping
-    public FireStation getFireStation(@RequestParam String station){
+    public FireStation getFireStation(@RequestParam int station){
         return fireStationService.getFireStation(station)
                 .orElseThrow(()-> new RuntimeException("Fire Station not found"));
+    }
+
+    @GetMapping
+    public PersonFireStationDTO getPersonsByFireStation(@RequestParam("stationNumber") int stationNumber){
+        return fireStationService.getPersonsByFireStation(stationNumber);
     }
 
     @PostMapping("/add")

@@ -1,0 +1,1 @@
+2025-02-03 16:46:45 [main] INFO  org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [app.SafetyNetAlertsApplicationTests]: SafetyNetAlertsApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.

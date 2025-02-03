@@ -8,13 +8,12 @@ import com.safetynet.service.PersonService;
 import java.util.List;
 
 @RestController
-@RequestMapping("/person")
 public class PersonController {
 
     @Autowired
     private PersonService personService;
 
-    @GetMapping("/all")
+    @GetMapping("/persons")
     public List<Person> getAllPersons(){
         return personService.getAllPersons();
     }
@@ -39,5 +38,8 @@ public class PersonController {
     public boolean deletePerson(@RequestParam String firstName, @RequestParam String lastName){
         return personService.deletePerson(firstName, lastName);
     }
+
+
+
 
 }

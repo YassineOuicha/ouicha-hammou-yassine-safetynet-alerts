@@ -2,20 +2,19 @@ package com.safetynet.model;
 
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
-@Data @Setter @Getter
+
+@Data
 public class FireStation {
 
     private String address;
-    private String station;
+    private int station;
 
     public String getAddress() {
         return address;
     }
 
-    public String getStation() {
+    public int getStation() {
         return station;
     }
 
@@ -23,7 +22,7 @@ public class FireStation {
         this.address = address;
     }
 
-    public void setStation(String station) {
+    public void setStation(int station) {
         this.station = station;
     }
 }

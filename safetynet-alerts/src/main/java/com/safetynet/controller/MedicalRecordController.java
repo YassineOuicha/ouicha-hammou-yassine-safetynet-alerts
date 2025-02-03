@@ -7,14 +7,14 @@ import com.safetynet.service.MedicalRecordService;
 
 import java.util.List;
 
-@RequestMapping("medicalrecord")
+
 @RestController
 public class MedicalRecordController {
 
     @Autowired
     private MedicalRecordService medicalRecordService;
 
-    @GetMapping("/all")
+    @GetMapping("/medicalrecords")
     public List<MedicalRecord> getAllMedicalRecords(){
         return medicalRecordService.getAllMedicalRecords();
     }
