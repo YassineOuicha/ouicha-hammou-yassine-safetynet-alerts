@@ -1,5 +1,6 @@
 package com.safetynet.controller;
 
+import com.safetynet.model.FireDTO;
 import com.safetynet.model.FireStation;
 import com.safetynet.model.PersonFireStationDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,10 @@ public class FireStationController {
     @GetMapping("phoneAlert")
     public List<String> getPhoneNumbersByFireStation(@RequestParam("firestation") int firestationNumber){
         return fireStationService.getPhoneNumbersByFireStation(firestationNumber);
+    }
+    @GetMapping("fire")
+    public FireDTO getPersonsByAddress(@RequestParam("address") String address){
+        return fireStationService.getPersonsByAddress(address);
     }
 
     @PostMapping("/add")

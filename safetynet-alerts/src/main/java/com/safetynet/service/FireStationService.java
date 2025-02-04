@@ -1,9 +1,6 @@
 package com.safetynet.service;
 
-import com.safetynet.model.FireStation;
-import com.safetynet.model.MedicalRecord;
-import com.safetynet.model.Person;
-import com.safetynet.model.PersonFireStationDTO;
+import com.safetynet.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.safetynet.repository.DataRepository;
@@ -11,6 +8,7 @@ import com.safetynet.repository.DataRepository;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -93,8 +91,53 @@ public class FireStationService {
                                               .toList();
     }
 
-    public getPersonsByAddress(String address){
+    public FireDTO getPersonsByAddress(String address){
 
+        FireDTO fireDTO = new FireDTO();
+
+        int stationNumber = getAllFireStations().stream()
+                            .filter(fs-> fs.getAddress().equalsIgnoreCase(address))
+                            .map(FireStation::getStation)
+                            .findFirst()
+                            .orElseThrow(()-> new RuntimeException("No fire station found for this address"));
+
+        fireDTO.setStationNumber(stationNumber);
+
+        List<Person> personsSameArea = dataService.getData().getPersons().stream()
+                                                 .filter(p-> p.getAddress().equalsIgnoreCase(address))
+                                                 .toList();
+
+        List<FireStationDTO> residents = new ArrayList<>();
+
+        for(Person p: personsSameArea){
+            FireStationDTO fireStationDTO = new FireStationDTO();
+
+            fireStationDTO.setFirstName(p.getFirstName());
+            fireStationDTO.setLastName(p.getLastName());
+            fireStationDTO.setPhone(p.getPhone());
+
+            MedicalRecord medicalRecord = dataService.getData().getMedicalrecords().stream()
+                    .filter(mr-> mr.getFirstName().equalsIgnoreCase(p.getFirstName())
+                            && mr.getLastName().equalsIgnoreCase(p.getLastName()))
+                    .findFirst()
+                    .orElse(null);
+
+            if (medicalRecord != null) {
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+                LocalDate birthDate = LocalDate.parse(medicalRecord.getBirthdate(), formatter);
+
+                int age = calculateAge(birthDate);
+
+                fireStationDTO.setAge(age);
+                fireStationDTO.setMedications(medicalRecord.getMedications());
+                fireStationDTO.setAllergies(medicalRecord.getAllergies());
+
+                residents.add(fireStationDTO);
+            }
+        }
+
+        fireDTO.setResidents(residents);
+        return fireDTO;
     }
 
     public FireStation addFireStation(FireStation fireStation){
