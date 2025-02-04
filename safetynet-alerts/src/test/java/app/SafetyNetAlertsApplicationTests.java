@@ -1,4 +1,4 @@
-package ouicha_hammou_yassine.safetynet_alerts;
+package app;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
