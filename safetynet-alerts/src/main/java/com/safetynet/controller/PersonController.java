@@ -2,6 +2,7 @@ package com.safetynet.controller;
 
 import com.safetynet.model.ChildAlertDTO;
 import com.safetynet.model.Person;
+import com.safetynet.model.PersonInfoDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.safetynet.service.PersonService;
@@ -29,6 +30,17 @@ public class PersonController {
     public List<ChildAlertDTO> getChildrenByAddress(@RequestParam("address") String address){
         return personService.getChildrenByAddress(address);
     }
+
+    @GetMapping("personInfo")
+    public List<PersonInfoDTO> getPersonInfoByLastName(@RequestParam String lastName){
+        return personService.getPersonInfoByLastName(lastName);
+    }
+
+    @GetMapping("/communityEmail")
+    public List<String> getCommunityEmails(@RequestParam String city){
+        return personService.getEmailsByCity(city);
+    }
+
 
     @PostMapping("/add")
     public Person addPerson(@RequestBody Person person){

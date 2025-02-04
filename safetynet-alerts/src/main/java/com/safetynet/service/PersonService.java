@@ -3,6 +3,7 @@ package com.safetynet.service;
 import com.safetynet.model.ChildAlertDTO;
 import com.safetynet.model.MedicalRecord;
 import com.safetynet.model.Person;
+import com.safetynet.model.PersonInfoDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.safetynet.repository.DataRepository;
@@ -74,6 +75,48 @@ public class PersonService {
         return childrenList;
     }
 
+    public List<PersonInfoDTO> getPersonInfoByLastName(String lastName){
+
+        List<PersonInfoDTO> relatives = new ArrayList<>();
+
+        List<Person> personsWithSameLastNames = getAllPersons().stream()
+                .filter(p-> p.getLastName().equalsIgnoreCase(lastName))
+                .toList();
+
+        for(Person person:personsWithSameLastNames){
+            MedicalRecord medicalRecord = dataService.getData().getMedicalrecords().stream()
+                    .filter(mr-> mr.getFirstName().equalsIgnoreCase(person.getFirstName())
+                    && mr.getLastName().equalsIgnoreCase(person.getLastName()))
+                    .findFirst()
+                    .orElse(null);
+            if(medicalRecord != null){
+                PersonInfoDTO personInfoDTO = new PersonInfoDTO();
+                personInfoDTO.setFirstName(person.getFirstName());
+                personInfoDTO.setLastName(person.getLastName());
+                personInfoDTO.setAddress(person.getAddress());
+
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+                LocalDate birthDate = LocalDate.parse(medicalRecord.getBirthdate(), formatter);
+                int age = calculateAge(birthDate);
+                personInfoDTO.setAge(age);
+
+                personInfoDTO.setEmail(person.getEmail());
+                personInfoDTO.setMedications(medicalRecord.getMedications());
+                personInfoDTO.setAllergies(medicalRecord.getAllergies());
+
+                relatives.add(personInfoDTO);
+            }
+        }
+        return relatives;
+    }
+
+    public List<String> getEmailsByCity(String city) {
+        return getAllPersons().stream()
+                .filter(p-> p.getCity().equalsIgnoreCase(city))
+                .map(Person::getEmail)
+                .distinct()
+                .toList();
+    }
     private int calculateAge(LocalDate birthDate) {
         LocalDate currentDate = LocalDate.now();
         if(birthDate!=null){
@@ -108,7 +151,6 @@ public class PersonService {
         return  getAllPersons().removeIf(p-> p.getFirstName().equalsIgnoreCase(firstName)
                 && p.getLastName().equalsIgnoreCase(lastName));
     }
-
 
 }
 
