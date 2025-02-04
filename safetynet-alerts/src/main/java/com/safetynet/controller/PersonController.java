@@ -55,6 +55,4 @@ public class PersonController {
         return personService.deletePerson(firstName, lastName);
     }
 
-
-
 }

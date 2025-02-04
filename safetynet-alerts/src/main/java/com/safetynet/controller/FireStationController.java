@@ -22,9 +22,9 @@ public class FireStationController {
         return fireStationService.getAllFireStations();
     }
 
-    @GetMapping ("/firestationNumber")
-    public FireStation getFireStation(@RequestParam int station){
-        return fireStationService.getFireStation(station)
+    @GetMapping ("/firestation/{stationNumber}")
+    public FireStation getFireStation(@RequestParam int stationNumber){
+        return fireStationService.getFireStation(stationNumber)
                 .orElseThrow(()-> new RuntimeException("Fire Station not found"));
     }
     @GetMapping("/firestation")
