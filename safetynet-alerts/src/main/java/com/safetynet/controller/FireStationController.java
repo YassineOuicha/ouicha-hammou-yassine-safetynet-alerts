@@ -2,11 +2,13 @@ package com.safetynet.controller;
 
 import com.safetynet.model.FireDTO;
 import com.safetynet.model.FireStation;
+import com.safetynet.model.FireStationDTO;
 import com.safetynet.model.PersonFireStationDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.safetynet.service.FireStationService;
 import java.util.List;
+import java.util.Map;
 
 @RequestMapping
 @RestController
@@ -38,6 +40,11 @@ public class FireStationController {
     @GetMapping("fire")
     public FireDTO getPersonsByAddress(@RequestParam("address") String address){
         return fireStationService.getPersonsByAddress(address);
+    }
+
+    @GetMapping("/flood/stations")
+    public Map<String, List<FireStationDTO>> getResidentsByStations(@RequestParam("stations") List<Integer> stationNumbers){
+        return fireStationService.getResidentsByStations(stationNumbers);
     }
 
     @PostMapping("/add")

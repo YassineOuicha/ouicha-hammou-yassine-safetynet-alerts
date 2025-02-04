@@ -8,9 +8,7 @@ import com.safetynet.repository.DataRepository;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class FireStationService {
@@ -138,6 +136,24 @@ public class FireStationService {
 
         fireDTO.setResidents(residents);
         return fireDTO;
+    }
+
+    public Map<String, List<FireStationDTO>> getResidentsByStations(List<Integer> stationNumbers){
+
+        Map<String, List<FireStationDTO>> residents = new HashMap<>();
+
+        for(int stationNumber : stationNumbers){
+            List<String> addresses = getAllFireStations().stream()
+                    .filter(fs-> fs.getStation() == stationNumber)
+                    .map(FireStation::getAddress)
+                    .toList();
+
+            for(String address: addresses){
+                FireDTO fireDTO = getPersonsByAddress(address);
+                residents.put(address, fireDTO.getResidents());
+            }
+        }
+        return residents;
     }
 
     public FireStation addFireStation(FireStation fireStation){
