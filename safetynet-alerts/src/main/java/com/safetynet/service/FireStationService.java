@@ -82,6 +82,21 @@ public class FireStationService {
         return 0;
     }
 
+    public List<String> getPhoneNumbersByFireStation(int fireStationNumber){
+        List<String> addresses = getAllFireStations().stream()
+                .filter(fs-> fs.getStation() == fireStationNumber).map(FireStation::getAddress).toList();
+
+        return dataService.getData().getPersons().stream()
+                                              .filter(p-> addresses.contains(p.getAddress()))
+                                              .map(Person::getPhone)
+                                              .distinct()
+                                              .toList();
+    }
+
+    public getPersonsByAddress(String address){
+
+    }
+
     public FireStation addFireStation(FireStation fireStation){
         Optional<FireStation> existingFireStation = getFireStation(fireStation.getStation());
         if(existingFireStation.isPresent()){

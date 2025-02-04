@@ -25,9 +25,14 @@ public class FireStationController {
                 .orElseThrow(()-> new RuntimeException("Fire Station not found"));
     }
 
-    @GetMapping
+    @GetMapping("firestation")
     public PersonFireStationDTO getPersonsByFireStation(@RequestParam("stationNumber") int stationNumber){
         return fireStationService.getPersonsByFireStation(stationNumber);
+    }
+
+    @GetMapping("phoneAlert")
+    public List<String> getPhoneNumbersByFireStation(@RequestParam("firestation") int firestationNumber){
+        return fireStationService.getPhoneNumbersByFireStation(firestationNumber);
     }
 
     @PostMapping("/add")
