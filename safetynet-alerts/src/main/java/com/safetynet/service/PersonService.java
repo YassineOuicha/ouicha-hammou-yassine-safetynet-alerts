@@ -1,10 +1,16 @@
 package com.safetynet.service;
 
+import com.safetynet.model.ChildAlertDTO;
+import com.safetynet.model.MedicalRecord;
 import com.safetynet.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.safetynet.repository.DataRepository;
 
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -29,6 +35,51 @@ public class PersonService {
                 .filter(p -> p.getFirstName().equalsIgnoreCase(firstName)
                 && p.getLastName().equalsIgnoreCase(lastName))
                 .findFirst();
+    }
+
+    public List<ChildAlertDTO> getChildrenByAddress(String address) {
+        ChildAlertDTO dto = new ChildAlertDTO();
+        List<Person> personsSameArea = getAllPersons().stream().filter(p->p.getAddress().equalsIgnoreCase(address)).toList();
+
+        List<ChildAlertDTO> childrenList = new ArrayList<>();
+
+        for(Person p: personsSameArea){
+            MedicalRecord medicalRecord = dataService.getData().getMedicalrecords().stream()
+                    .filter(mr-> mr.getFirstName().equalsIgnoreCase(p.getFirstName())
+                            && mr.getLastName().equalsIgnoreCase(p.getLastName()))
+                    .findFirst()
+                    .orElse(null);
+
+            if (medicalRecord != null) {
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+                LocalDate birthDate = LocalDate.parse(medicalRecord.getBirthdate(), formatter);
+                int age = calculateAge(birthDate);
+
+                if (age <= 18) {
+                    ChildAlertDTO childAlertDTO = new ChildAlertDTO();
+                    childAlertDTO.setFirstName(p.getFirstName());
+                    childAlertDTO.setLastName(p.getLastName());
+                    childAlertDTO.setAge(age);
+
+                    List<String> houseHoldMembers = personsSameArea.stream()
+                            .filter(p2-> !p2.getFirstName().equalsIgnoreCase(p.getFirstName())
+                                                 && p2.getLastName().equalsIgnoreCase(p.getLastName()))
+                            .map(p2 -> p2.getFirstName() + " " + p2.getLastName())
+                            .toList();
+                    childAlertDTO.setHouseHoldMembers(houseHoldMembers);
+                    childrenList.add(childAlertDTO);
+                }
+            }
+        }
+        return childrenList;
+    }
+
+    private int calculateAge(LocalDate birthDate) {
+        LocalDate currentDate = LocalDate.now();
+        if(birthDate!=null){
+            return Period.between(birthDate, currentDate).getYears();
+        }
+        return 0;
     }
 
     public Person addPerson(Person person){
@@ -57,6 +108,7 @@ public class PersonService {
         return  getAllPersons().removeIf(p-> p.getFirstName().equalsIgnoreCase(firstName)
                 && p.getLastName().equalsIgnoreCase(lastName));
     }
+
 
 }
 

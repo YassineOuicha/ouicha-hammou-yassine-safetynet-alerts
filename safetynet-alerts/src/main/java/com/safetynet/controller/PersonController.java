@@ -1,5 +1,6 @@
 package com.safetynet.controller;
 
+import com.safetynet.model.ChildAlertDTO;
 import com.safetynet.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,6 +25,11 @@ public class PersonController {
                 .orElseThrow(()-> new RuntimeException("Person not found"));
     }
 
+    @GetMapping("/childAlert")
+    public List<ChildAlertDTO> getChildrenByAddress(@RequestParam("address") String address){
+        return personService.getChildrenByAddress(address);
+    }
+
     @PostMapping("/add")
     public Person addPerson(@RequestBody Person person){
         return personService.addPerson(person);
@@ -38,7 +44,6 @@ public class PersonController {
     public boolean deletePerson(@RequestParam String firstName, @RequestParam String lastName){
         return personService.deletePerson(firstName, lastName);
     }
-
 
 
 

@@ -63,7 +63,7 @@ public class FireStationService {
             LocalDate birthDate = LocalDate.parse(medicalRecord.getBirthdate(), formatter);
 
             int age = calculateAge(birthDate);
-            if(age>=18){
+            if(age>18){
                 nbAdults++;
             } else {
                 nbChildren++;
