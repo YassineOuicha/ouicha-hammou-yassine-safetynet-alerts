@@ -10,7 +10,7 @@ import com.safetynet.service.FireStationService;
 import java.util.List;
 import java.util.Map;
 
-@RequestMapping
+
 @RestController
 public class FireStationController {
 
@@ -22,22 +22,21 @@ public class FireStationController {
         return fireStationService.getAllFireStations();
     }
 
-    @GetMapping
+    @GetMapping ("/firestationNumber")
     public FireStation getFireStation(@RequestParam int station){
         return fireStationService.getFireStation(station)
                 .orElseThrow(()-> new RuntimeException("Fire Station not found"));
     }
-
-    @GetMapping("firestation")
+    @GetMapping("/firestation")
     public PersonFireStationDTO getPersonsByFireStation(@RequestParam("stationNumber") int stationNumber){
         return fireStationService.getPersonsByFireStation(stationNumber);
     }
 
-    @GetMapping("phoneAlert")
+    @GetMapping("/phoneAlert")
     public List<String> getPhoneNumbersByFireStation(@RequestParam("firestation") int firestationNumber){
         return fireStationService.getPhoneNumbersByFireStation(firestationNumber);
     }
-    @GetMapping("fire")
+    @GetMapping("/fire")
     public FireDTO getPersonsByAddress(@RequestParam("address") String address){
         return fireStationService.getPersonsByAddress(address);
     }
@@ -47,17 +46,17 @@ public class FireStationController {
         return fireStationService.getResidentsByStations(stationNumbers);
     }
 
-    @PostMapping("/add")
+    @PostMapping("/firestation")
     public FireStation addFireStation(@RequestBody FireStation fireStation){
         return fireStationService.addFireStation(fireStation);
     }
 
-    @PutMapping("/update")
+    @PutMapping("/firestation")
     public boolean updateFireStation(@RequestBody FireStation fireStation){
         return fireStationService.updateFireStation(fireStation);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/firestation")
     public boolean deleteFireStation(@RequestBody FireStation fireStation){
         return fireStationService.deleteFireStation(fireStation);
     }

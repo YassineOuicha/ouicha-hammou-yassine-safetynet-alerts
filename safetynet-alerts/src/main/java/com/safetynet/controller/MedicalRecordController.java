@@ -19,23 +19,23 @@ public class MedicalRecordController {
         return medicalRecordService.getAllMedicalRecords();
     }
 
-    @GetMapping
+    @GetMapping("/medicalrecord")
     public MedicalRecord getMedicalRecord(@RequestParam String firstName, @RequestParam String lastName){
         return medicalRecordService.getMedicalRecord(firstName, lastName)
                 .orElseThrow(()-> new RuntimeException("Medical record not found"));
     }
 
-    @PostMapping("/add")
+    @PostMapping("/medicalrecord")
     public MedicalRecord addMedicalRecord(@RequestBody MedicalRecord medicalRecord){
         return medicalRecordService.addMedicalRecord(medicalRecord);
     }
 
-    @PutMapping("/update")
+    @PutMapping("/medicalrecord")
     public boolean updateMedicalRecord(@RequestBody MedicalRecord medicalRecord){
         return medicalRecordService.updateMedicalRecord(medicalRecord);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/medicalrecord")
     public boolean deleteMedicalRecord(@RequestParam String firstName, @RequestParam String lastName){
         MedicalRecord medicalRecord = getMedicalRecord(firstName, lastName);
         return medicalRecordService.deleteMedicalRecord(medicalRecord);

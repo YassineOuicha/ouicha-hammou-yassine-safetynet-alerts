@@ -20,18 +20,17 @@ public class PersonController {
         return personService.getAllPersons();
     }
 
-    @GetMapping
+    @GetMapping ("/person")
     public Person getPerson(@RequestParam String firstName, @RequestParam String lastName){
         return personService.getPerson(firstName, lastName)
                 .orElseThrow(()-> new RuntimeException("Person not found"));
     }
-
     @GetMapping("/childAlert")
     public List<ChildAlertDTO> getChildrenByAddress(@RequestParam("address") String address){
         return personService.getChildrenByAddress(address);
     }
 
-    @GetMapping("personInfo")
+    @GetMapping("/personInfo")
     public List<PersonInfoDTO> getPersonInfoByLastName(@RequestParam String lastName){
         return personService.getPersonInfoByLastName(lastName);
     }
@@ -41,18 +40,17 @@ public class PersonController {
         return personService.getEmailsByCity(city);
     }
 
-
-    @PostMapping("/add")
+    @PostMapping("/person")
     public Person addPerson(@RequestBody Person person){
         return personService.addPerson(person);
     }
 
-    @PutMapping("/update")
+    @PutMapping("/person")
     public boolean updatePerson(@RequestBody Person person){
         return personService.updatePerson(person);
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/person")
     public boolean deletePerson(@RequestParam String firstName, @RequestParam String lastName){
         return personService.deletePerson(firstName, lastName);
     }
