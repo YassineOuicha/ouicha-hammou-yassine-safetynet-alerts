@@ -7,8 +7,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import java.util.List;
-
+import com.safetynet.SafetyNetAlertsApplication;
+import com.safetynet.model.FireStation;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @AutoConfigureMockMvc
-@SpringBootTest
+@SpringBootTest(classes = SafetyNetAlertsApplication.class)
 public class FireStationControllerTest {
 
     @Autowired
@@ -53,11 +53,63 @@ public class FireStationControllerTest {
                 .andExpect(jsonPath("$").isArray());
     }
 
+    @Test
+    public void testGetPersonsByAddress() throws Exception {
+        mockMvc.perform(get("/fire").param("address", "1509 Culver St"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.stationNumber").exists())
+                .andExpect(jsonPath("$.residents").isArray());
+    }
+
+    @Test
+    public void testGetResidentsByStations() throws Exception {
+        mockMvc.perform(get("/flood/stations").param("stations", "1,3,4"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$").isMap());
+    }
 
 
+    @Test
+    @DirtiesContext
+    public void testAddFireStation() throws Exception {
+        FireStation newStation = new FireStation();
+        newStation.setStation(5);
+        newStation.setAddress("Colmar 68000");
 
+        mockMvc.perform(post("/firestation")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(newStation)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.address").value("Colmar 68000"))
+                .andExpect(jsonPath("$.station").value(5));
+    }
 
+    @Test
+    @DirtiesContext
+    public void testUpdateFireStation() throws Exception {
+        FireStation updatedStation = new FireStation();
+        updatedStation.setStation(3);
+        updatedStation.setAddress("Colmar 68000");
 
+        mockMvc.perform(put("/firestation")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(updatedStation)))
+                .andExpect(status().isOk())
+                .andExpect(content().string("true"));
+    }
 
+    @Test
+    @DirtiesContext
+    public void testDeleteFireStation() throws Exception {
+        FireStation stationToDelete = new FireStation();
+        stationToDelete.setStation(3);
+        stationToDelete.setAddress("1509 Culver St");
+
+        mockMvc.perform(delete("/firestation")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(stationToDelete)))
+                .andExpect(status().isOk())
+                .andExpect(content().string("true"));
+    }
 
 }
