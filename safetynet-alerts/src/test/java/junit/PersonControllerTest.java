@@ -7,8 +7,10 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.safetynet.SafetyNetAlertsApplication;
 import com.safetynet.model.FireStation;
+import com.safetynet.model.Person;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,13 +56,67 @@ public class PersonControllerTest {
                 .andExpect(jsonPath("$").isArray());
     }
 
+    @Test
+    public void testGetPersonInfo() throws Exception {
+        mockMvc.perform(get("/personInfo").param("lastName", "Boyd"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$").isArray());
+    }
 
+    @Test
+    public void testGetCommunityEmails() throws Exception {
+        mockMvc.perform(get("/communityEmail").param("city", "Culver"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$").isArray());
+    }
 
+    @Test
+    @DirtiesContext
+    public void testAddPerson() throws Exception {
+        Person newPerson = new Person();
+        newPerson.setFirstName("Yassine");
+        newPerson.setLastName("Ouicha");
+        newPerson.setAddress("Colmar 68000");
+        newPerson.setCity("Colmar");
+        newPerson.setPhone("0707070707");
+        newPerson.setEmail("yassine.ouicha.nc2@gmail.com");
+        newPerson.setZip("68000");
 
+        mockMvc.perform(post("/person")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(newPerson)))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.firstName").value("Yassine"))
+                .andExpect(jsonPath("$.lastName").value("Ouicha"));
+    }
 
+    @Test
+    @DirtiesContext
+    public void testUpdatePerson() throws Exception {
+        Person updatedPerson = new Person();
+        updatedPerson.setFirstName("Yassine");
+        updatedPerson.setLastName("Ouicha");
+        updatedPerson.setAddress("Colmar 68000");
+        updatedPerson.setCity("Colmar");
+        updatedPerson.setPhone("0707070707");
+        updatedPerson.setEmail("yassine.ouicha.nc2@gmail.com");
+        updatedPerson.setZip("68000");
 
+        mockMvc.perform(put("/person")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(updatedPerson)))
+                .andExpect(status().isOk())
+                .andExpect(content().string("true"));
+    }
 
-
-
-
+    @Test
+    @DirtiesContext
+    public void testDeletePerson() throws Exception {
+        mockMvc.perform(delete("/person")
+                .param("firstName", "John")
+                .param("lastName", "Boyd"))
+                .andExpect(status().isOk())
+                .andExpect(content().string("true"));
+    }
+    
 }
