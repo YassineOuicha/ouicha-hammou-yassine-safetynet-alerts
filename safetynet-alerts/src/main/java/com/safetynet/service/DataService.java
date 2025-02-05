@@ -8,11 +8,24 @@ import com.safetynet.repository.DataRepository;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Service class responsible for loading and providing data from a JSON file.
+ * This service reads data from a specified JSON file and stores data in the
+ * DataRepository (persons, fire stations, and medical records).
+ */
 @Service
 public class DataService {
 
+    /**
+     * The DataRepository instance that holds the loaded data.
+     */
     private DataRepository dataRepository;
 
+    /**
+     * Method that is executed after the construction of the beans. It loads data
+     * from a data.json file and initializes the dataRepository.
+     * The data is stored into the dataRepository using Jackson's ObjectMapper.
+     */
     @PostConstruct
     public void LoadData(){
         ObjectMapper objectMapper = new ObjectMapper();
@@ -25,6 +38,11 @@ public class DataService {
         }
     }
 
+    /**
+     * Returns the dataRepository instance containing the loaded data.
+     *
+     * @return the dataRepository instance
+     */
     public DataRepository getData(){
         return dataRepository;
     }

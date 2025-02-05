@@ -6,6 +6,10 @@ import lombok.Setter;
 
 import java.util.List;
 
+/**
+ * Data Transfer Object representing the list of persons associated with
+ * a particular fire station, along with the count of adults and children.
+ */
 @Setter
 @Getter
 @Data
@@ -15,6 +19,7 @@ public class PersonFireStationDTO {
     private int adults;
     private int children;
 
+    // Setters and getters : the lombok annotations doesn't work correctly despite the dependency injection
     public List<Person> getPersons() {
         return persons;
     }

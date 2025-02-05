@@ -6,6 +6,10 @@ import lombok.Setter;
 
 import java.util.List;
 
+/**
+ * Data Transfer Object representing detailed information about a person,
+ * including personal details, medical information, and allergies.
+ */
 @Data @Getter @Setter
 public class PersonInfoDTO {
     private String firstName;
@@ -16,7 +20,7 @@ public class PersonInfoDTO {
     private List<String> medications;
     private List<String> allergies;
 
-
+    // Setters and getters : the lombok annotations doesn't work correctly despite the dependency injection
     public String getFirstName() {
         return firstName;
     }

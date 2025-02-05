@@ -23,6 +23,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.List;
 
+/**
+ * Test class for the MedicalRecordController to verify the validation of the medical record related endpoints.
+ */
 @AutoConfigureMockMvc
 @SpringBootTest(classes = SafetyNetAlertsApplication.class)
 public class MedicalRecordControllerTest {

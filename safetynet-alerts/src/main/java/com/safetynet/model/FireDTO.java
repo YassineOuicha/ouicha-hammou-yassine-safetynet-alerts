@@ -6,12 +6,17 @@ import lombok.Setter;
 
 import java.util.List;
 
+/**
+ * Data Transfer Object representing residents covered by a specific fire station.
+ * Contains the fire station number and a list of residents associated with that fire station.
+ */
 @Data @Getter @Setter
 public class FireDTO {
 
     private int stationNumber;
     private List<FireStationDTO> residents;
 
+    // Setters and getters : the lombok annotations doesn't work correctly despite the dependency injection
     public List<FireStationDTO> getResidents() {
         return residents;
     }
