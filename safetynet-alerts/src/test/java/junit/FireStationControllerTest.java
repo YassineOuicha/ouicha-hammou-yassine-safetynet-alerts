@@ -39,7 +39,7 @@ public class FireStationControllerTest {
 
     @Test
     public void testGetPersonsByFireStation() throws Exception {
-        mockMvc.perform(get("/firestation").param("stationNumer","3"))
+        mockMvc.perform(get("/firestation").param("stationNumber","3"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.persons").isArray())
                 .andExpect(jsonPath("$.adults").exists())

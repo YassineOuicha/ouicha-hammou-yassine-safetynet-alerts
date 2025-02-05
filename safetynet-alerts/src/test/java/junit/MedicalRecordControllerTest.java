@@ -73,8 +73,8 @@ public class MedicalRecordControllerTest {
     @DirtiesContext
     public void testUpdateMedicalRecord() throws Exception {
         MedicalRecord updatedMedicalRecord = new MedicalRecord();
-        updatedMedicalRecord.setFirstName("Yassine");
-        updatedMedicalRecord.setLastName("Ouicha");
+        updatedMedicalRecord.setFirstName("Tenley");
+        updatedMedicalRecord.setLastName("Boyd");
         updatedMedicalRecord.setBirthdate("06/02/1997");
         updatedMedicalRecord.setMedications(List.of("med2: 50mg", "med4: 150 mg"));
         updatedMedicalRecord.setAllergies(List.of("allergy2", "allergy5", "allergy6"));

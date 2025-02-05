@@ -91,8 +91,8 @@ public class PersonControllerTest {
     @DirtiesContext
     public void testUpdatePerson() throws Exception {
         Person updatedPerson = new Person();
-        updatedPerson.setFirstName("Yassine");
-        updatedPerson.setLastName("Ouicha");
+        updatedPerson.setFirstName("Tenley");
+        updatedPerson.setLastName("Boyd");
         updatedPerson.setAddress("Colmar 68000");
         updatedPerson.setCity("Colmar");
         updatedPerson.setPhone("0707070707");
