@@ -9,7 +9,10 @@ import com.safetynet.repository.DataRepository;
 import java.util.List;
 import java.util.Optional;
 
-
+/**
+ * Service class responsible for managing medical records of persons.
+ * Provides methods to get, add, update, and delete medical records.
+ */
 @Service
 public class MedicalRecordService {
 

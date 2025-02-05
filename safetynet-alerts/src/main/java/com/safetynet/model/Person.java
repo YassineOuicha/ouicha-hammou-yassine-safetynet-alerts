@@ -4,6 +4,10 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * Represents an individual person with personal information including
+ * name, address, city, zip code, phone number and email.
+ */
 @Data @Setter @Getter
 public class Person {
     private String firstName;
@@ -15,6 +19,7 @@ public class Person {
     private String email;
 
 
+    // Setters and getters : the lombok annotations doesn't work correctly despite the dependency injection
     public String getFirstName() {
         return firstName;
     }

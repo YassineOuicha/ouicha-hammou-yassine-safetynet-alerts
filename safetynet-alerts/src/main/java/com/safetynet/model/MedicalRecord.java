@@ -5,7 +5,10 @@ import lombok.Getter;
 import lombok.Setter;
 import java.util.List;
 
-
+/**
+ * Represents a medical record for an individual, containing personal information
+ * such as name, birthdate, medications, and allergies.
+ */
 @Data @Setter @Getter
 public class MedicalRecord {
 
@@ -15,7 +18,7 @@ public class MedicalRecord {
     private List<String> medications;
     private List<String> allergies;
 
-
+    // Setters and getters : the lombok annotations doesn't work correctly despite the dependency injection
     public String getFirstName() {
         return firstName;
     }

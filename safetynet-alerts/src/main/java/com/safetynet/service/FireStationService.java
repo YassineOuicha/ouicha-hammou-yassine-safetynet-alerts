@@ -10,6 +10,11 @@ import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 
+/**
+ * Service class responsible for managing and processing information related to fire stations and their residents.
+ * Provides methods to get, add, update, and delete fire stations, as well as fetching information about the persons
+ * in the areas covered by specific fire stations.
+ */
 @Service
 public class FireStationService {
 

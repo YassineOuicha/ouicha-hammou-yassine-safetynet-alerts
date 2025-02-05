@@ -15,6 +15,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Service class that provides methods for managing and retrieving information about persons.
+ * It includes functionalities like getting person information, adding, updating, and deleting persons,
+ * and gathering related data like children by address, person info by last name, and emails by city.
+ */
 @Service
 public class PersonService {
 

@@ -6,6 +6,10 @@ import lombok.Setter;
 
 import java.util.List;
 
+/**
+ * Data Transfer Object representing a child alert.
+ * Contains the child's information such as name, age, and household members.
+ */
 @Data @Getter @Setter
 public class ChildAlertDTO {
 
@@ -14,7 +18,7 @@ public class ChildAlertDTO {
     private int age;
     private List<String> houseHoldMembers;
 
-
+    // Setters and getters : the lombok annotations doesn't work correctly despite the dependency injection
     public String getFirstName() {
         return firstName;
     }

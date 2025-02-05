@@ -1,12 +1,16 @@
 package com.safetynet.model;
 
-
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
 
+/**
+ * Data Transfer Object representing a resident's information
+ * related to a specific fire station. Includes personal details such as name,
+ * phone number, age, medications, and allergies.
+ */
 @Data @Setter @Getter
 public class FireStationDTO {
 
@@ -17,6 +21,7 @@ public class FireStationDTO {
     private List<String> medications;
     private List<String> allergies;
 
+    // Setters and getters : the lombok annotations doesn't work correctly despite the dependency injection
     public String getLastName() {
         return lastName;
     }
