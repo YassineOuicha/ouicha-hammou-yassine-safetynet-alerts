@@ -1,4 +1,4 @@
-package Service;
+package service;
 
 import com.safetynet.repository.DataRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
