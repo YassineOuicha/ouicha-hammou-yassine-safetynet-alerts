@@ -1,14 +1,11 @@
-package junit;
+package controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.safetynet.SafetyNetAlertsApplication;
-import com.safetynet.model.MedicalRecord;
 import com.safetynet.model.Person;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;
@@ -21,32 +18,29 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.util.List;
-
 /**
- * Test class for the MedicalRecordController to verify the validation of the medical record related endpoints.
+ * Test class for the PersonController to ensure the validation of the Person related endpoints.
  */
 @AutoConfigureMockMvc
 @SpringBootTest(classes = SafetyNetAlertsApplication.class)
-public class MedicalRecordControllerTest {
+public class PersonControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
     @Autowired
     private ObjectMapper objectMapper;
 
-
     @Test
-    public void testGetAllMedicalRecords() throws Exception {
-        mockMvc.perform(get("/medicalrecords"))
+    public void testGetAllPersons() throws Exception {
+        mockMvc.perform(get("/persons"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$").isArray())
                 .andExpect(jsonPath("$.length()").value(Matchers.greaterThan(0)));
     }
 
     @Test
-    public void testGetMedicalRecord() throws Exception {
-        mockMvc.perform(get("/medicalrecord")
+    public void testGetPerson() throws Exception {
+        mockMvc.perform(get("/person")
                 .param("firstName", "John")
                 .param("lastName", "Boyd"))
                 .andExpect(status().isOk())
@@ -55,18 +49,41 @@ public class MedicalRecordControllerTest {
     }
 
     @Test
-    @DirtiesContext
-    public void testAddMedicalRecord() throws Exception {
-        MedicalRecord medicalRecord = new MedicalRecord();
-        medicalRecord.setFirstName("Yassine");
-        medicalRecord.setLastName("Ouicha");
-        medicalRecord.setBirthdate("06/02/1997");
-        medicalRecord.setMedications(List.of("med1: 100mg", "med2: 200 mg"));
-        medicalRecord.setAllergies(List.of("allergy1", "allergy2", "allergy3"));
+    public void testGetChildAlert() throws Exception {
+        mockMvc.perform(get("/childAlert").param("address", "1509 Culver St"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$").isArray());
+    }
 
-        mockMvc.perform(post("/medicalrecord")
+    @Test
+    public void testGetPersonInfo() throws Exception {
+        mockMvc.perform(get("/personInfo").param("lastName", "Boyd"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$").isArray());
+    }
+
+    @Test
+    public void testGetCommunityEmails() throws Exception {
+        mockMvc.perform(get("/communityEmail").param("city", "Culver"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$").isArray());
+    }
+
+    @Test
+    @DirtiesContext
+    public void testAddPerson() throws Exception {
+        Person newPerson = new Person();
+        newPerson.setFirstName("Yassine");
+        newPerson.setLastName("Ouicha");
+        newPerson.setAddress("Colmar 68000");
+        newPerson.setCity("Colmar");
+        newPerson.setPhone("0707070707");
+        newPerson.setEmail("yassine.ouicha.nc2@gmail.com");
+        newPerson.setZip("68000");
+
+        mockMvc.perform(post("/person")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(medicalRecord)))
+                .content(objectMapper.writeValueAsString(newPerson)))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.firstName").value("Yassine"))
                 .andExpect(jsonPath("$.lastName").value("Ouicha"));
@@ -74,28 +91,31 @@ public class MedicalRecordControllerTest {
 
     @Test
     @DirtiesContext
-    public void testUpdateMedicalRecord() throws Exception {
-        MedicalRecord updatedMedicalRecord = new MedicalRecord();
-        updatedMedicalRecord.setFirstName("Tenley");
-        updatedMedicalRecord.setLastName("Boyd");
-        updatedMedicalRecord.setBirthdate("06/02/1997");
-        updatedMedicalRecord.setMedications(List.of("med2: 50mg", "med4: 150 mg"));
-        updatedMedicalRecord.setAllergies(List.of("allergy2", "allergy5", "allergy6"));
+    public void testUpdatePerson() throws Exception {
+        Person updatedPerson = new Person();
+        updatedPerson.setFirstName("Tenley");
+        updatedPerson.setLastName("Boyd");
+        updatedPerson.setAddress("Colmar 68000");
+        updatedPerson.setCity("Colmar");
+        updatedPerson.setPhone("0707070707");
+        updatedPerson.setEmail("yassine.ouicha.nc2@gmail.com");
+        updatedPerson.setZip("68000");
 
-        mockMvc.perform(put("/medicalrecord")
+        mockMvc.perform(put("/person")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(updatedMedicalRecord)))
+                .content(objectMapper.writeValueAsString(updatedPerson)))
                 .andExpect(status().isOk())
                 .andExpect(content().string("true"));
     }
 
     @Test
     @DirtiesContext
-    public void testDeleteMedicalRecord() throws Exception {
-        mockMvc.perform(delete("/medicalrecord")
+    public void testDeletePerson() throws Exception {
+        mockMvc.perform(delete("/person")
                 .param("firstName", "John")
                 .param("lastName", "Boyd"))
                 .andExpect(status().isOk())
                 .andExpect(content().string("true"));
     }
+
 }

@@ -28,13 +28,25 @@ public class DataService {
     private Resource resourceFile;
 
     /**
+     * ObjectMapper injected via constructor for JSON parsing.
+     */
+    private final ObjectMapper objectMapper;
+    public DataService(ObjectMapper objectMapper) {
+        this.objectMapper = objectMapper;
+    }
+
+    public DataService(ObjectMapper objectMapper, Resource resourceFile) {
+        this.objectMapper = objectMapper;
+        this.resourceFile = resourceFile;
+    }
+
+    /**
      * Method that is executed after the construction of the beans. It loads data
      * from a data.json file and initializes the dataRepository.
      * The data is stored into the dataRepository using Jackson's ObjectMapper.
      */
     @PostConstruct
     public void LoadData(){
-        ObjectMapper objectMapper = new ObjectMapper();
         try {
             dataRepository = objectMapper.readValue(resourceFile.getFile(), DataRepository.class);
             System.out.println("JSON Data has been uploaded successfully");
@@ -51,6 +63,4 @@ public class DataService {
     public DataRepository getData(){
         return dataRepository;
     }
-
-
 }
