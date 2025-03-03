@@ -7084,3 +7084,293 @@ Unconditional classes:
 2025-03-03 17:44:08 - INFO - c.s.SafetyNetAlertsApplication - Started SafetyNetAlertsApplication in 8.86 seconds (process running for 10.842)
 2025-03-03 17:51:44 - INFO - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
 2025-03-03 17:51:44 - INFO - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-03-03 20:25:11 - INFO - c.s.SafetyNetAlertsApplication - Starting SafetyNetAlertsApplication using Java 23.0.1 with PID 18612 (C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts)
+2025-03-03 20:25:11 - INFO - c.s.SafetyNetAlertsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:25:11 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-03 20:25:11 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-03 20:25:14 - INFO - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-03-03 20:25:14 - INFO - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-03 20:25:14 - INFO - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-03 20:25:14 - INFO - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-03 20:25:14 - INFO - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-03 20:25:14 - INFO - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3179 ms
+2025-03-03 20:25:14 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:25:14 - WARN - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fireStationController': Unsatisfied dependency expressed through field 'fireStationService': Error creating bean with name 'fireStationService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\FireStationService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'dataService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\DataService.class]: Failed to instantiate [com.safetynet.service.DataService]: No default constructor found
+2025-03-03 20:25:14 - INFO - o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-03-03 20:25:14 - INFO - o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-03 20:25:14 - ERROR - o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fireStationController': Unsatisfied dependency expressed through field 'fireStationService': Error creating bean with name 'fireStationService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\FireStationService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'dataService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\DataService.class]: Failed to instantiate [com.safetynet.service.DataService]: No default constructor found
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1445)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.safetynet.SafetyNetAlertsApplication.main(SafetyNetAlertsApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fireStationService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\FireStationService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'dataService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\DataService.class]: Failed to instantiate [com.safetynet.service.DataService]: No default constructor found
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\DataService.class]: Failed to instantiate [com.safetynet.service.DataService]: No default constructor found
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1343)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1228)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 37 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.safetynet.service.DataService]: No default constructor found
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1337)
+	... 48 common frames omitted
+Caused by: java.lang.NoSuchMethodException: com.safetynet.service.DataService.<init>()
+	at java.base/java.lang.Class.getConstructor0(Class.java:3833)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:3004)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:114)
+	... 49 common frames omitted
+2025-03-03 20:25:39 - INFO - c.s.SafetyNetAlertsApplication - Starting SafetyNetAlertsApplication using Java 23.0.1 with PID 9596 (C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts)
+2025-03-03 20:25:39 - INFO - c.s.SafetyNetAlertsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:25:39 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-03 20:25:39 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-03 20:25:42 - INFO - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-03-03 20:25:42 - INFO - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-03 20:25:42 - INFO - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-03 20:25:42 - INFO - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-03 20:25:42 - INFO - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-03 20:25:42 - INFO - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3126 ms
+2025-03-03 20:25:43 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:25:43 - WARN - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fireStationController': Unsatisfied dependency expressed through field 'fireStationService': Error creating bean with name 'fireStationService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\FireStationService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'dataService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\DataService.class]: Failed to instantiate [com.safetynet.service.DataService]: No default constructor found
+2025-03-03 20:25:43 - INFO - o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-03-03 20:25:43 - INFO - o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-03 20:25:43 - ERROR - o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fireStationController': Unsatisfied dependency expressed through field 'fireStationService': Error creating bean with name 'fireStationService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\FireStationService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'dataService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\DataService.class]: Failed to instantiate [com.safetynet.service.DataService]: No default constructor found
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1445)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.safetynet.SafetyNetAlertsApplication.main(SafetyNetAlertsApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fireStationService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\FireStationService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'dataService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\DataService.class]: Failed to instantiate [com.safetynet.service.DataService]: No default constructor found
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\DataService.class]: Failed to instantiate [com.safetynet.service.DataService]: No default constructor found
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1343)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1228)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 37 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.safetynet.service.DataService]: No default constructor found
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1337)
+	... 48 common frames omitted
+Caused by: java.lang.NoSuchMethodException: com.safetynet.service.DataService.<init>()
+	at java.base/java.lang.Class.getConstructor0(Class.java:3833)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:3004)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:114)
+	... 49 common frames omitted
+2025-03-03 20:28:14 - INFO - c.s.SafetyNetAlertsApplication - Starting SafetyNetAlertsApplication using Java 23.0.1 with PID 17020 (C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts)
+2025-03-03 20:28:14 - INFO - c.s.SafetyNetAlertsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:28:15 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-03 20:28:15 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-03 20:28:18 - INFO - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-03-03 20:28:18 - INFO - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-03 20:28:18 - INFO - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-03 20:28:18 - INFO - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-03 20:28:18 - INFO - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-03 20:28:18 - INFO - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3251 ms
+2025-03-03 20:28:18 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:28:18 - WARN - o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fireStationController': Unsatisfied dependency expressed through field 'fireStationService': Error creating bean with name 'fireStationService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\FireStationService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'dataService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\DataService.class]: Failed to instantiate [com.safetynet.service.DataService]: No default constructor found
+2025-03-03 20:28:18 - INFO - o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-03-03 20:28:18 - INFO - o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-03-03 20:28:18 - ERROR - o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fireStationController': Unsatisfied dependency expressed through field 'fireStationService': Error creating bean with name 'fireStationService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\FireStationService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'dataService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\DataService.class]: Failed to instantiate [com.safetynet.service.DataService]: No default constructor found
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:788)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:768)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1445)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.safetynet.SafetyNetAlertsApplication.main(SafetyNetAlertsApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fireStationService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\FireStationService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'dataService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\DataService.class]: Failed to instantiate [com.safetynet.service.DataService]: No default constructor found
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1381)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1218)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:785)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataService' defined in file [C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes\com\safetynet\service\DataService.class]: Failed to instantiate [com.safetynet.service.DataService]: No default constructor found
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1343)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1228)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:563)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:307)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1573)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1519)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 37 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.safetynet.service.DataService]: No default constructor found
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:118)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1337)
+	... 48 common frames omitted
+Caused by: java.lang.NoSuchMethodException: com.safetynet.service.DataService.<init>()
+	at java.base/java.lang.Class.getConstructor0(Class.java:3833)
+	at java.base/java.lang.Class.getDeclaredConstructor(Class.java:3004)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:114)
+	... 49 common frames omitted
+2025-03-03 20:30:10 - INFO - c.s.SafetyNetAlertsApplication - Starting SafetyNetAlertsApplication using Java 23.0.1 with PID 6900 (C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts\target\classes started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts)
+2025-03-03 20:30:10 - INFO - c.s.SafetyNetAlertsApplication - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:30:10 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-03 20:30:10 - INFO - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-03 20:30:13 - INFO - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-03-03 20:30:13 - INFO - o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-03 20:30:13 - INFO - o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-03 20:30:13 - INFO - o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-03 20:30:13 - INFO - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-03 20:30:13 - INFO - o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3502 ms
+2025-03-03 20:30:13 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:30:15 - INFO - o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-03 20:30:15 - INFO - o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-03 20:30:15 - INFO - o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-03-03 20:30:15 - INFO - c.s.SafetyNetAlertsApplication - Started SafetyNetAlertsApplication in 6.819 seconds (process running for 8.275)
+2025-03-03 20:31:52 - INFO - o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-03 20:31:52 - INFO - o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-03 20:31:52 - INFO - o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-03-03 20:31:52 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /login]
+2025-03-03 20:31:52 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /login]
+2025-03-03 20:31:58 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /persons]
+2025-03-03 20:31:58 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /persons]
+2025-03-03 20:32:03 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /medicalrecords]
+2025-03-03 20:32:03 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /medicalrecords]
+2025-03-03 20:32:09 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /firestation?stationNumber=2]
+2025-03-03 20:32:09 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /firestation?stationNumber=2]
+2025-03-03 20:32:15 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /firestation?stationNumber=1]
+2025-03-03 20:32:15 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /firestation?stationNumber=1]
+2025-03-03 20:32:19 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /firestation?stationNumber=3]
+2025-03-03 20:32:19 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /firestation?stationNumber=3]
+2025-03-03 20:32:26 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /firestation?stationNumber=1]
+2025-03-03 20:32:26 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /firestation?stationNumber=1]
+2025-03-03 20:33:59 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /flood/stations?stations=1]
+2025-03-03 20:33:59 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /flood/stations?stations=1]
+2025-03-03 20:34:05 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /flood/stations?stations=2]
+2025-03-03 20:34:05 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /flood/stations?stations=2]
+2025-03-03 20:34:13 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /flood/stations?stations=3]
+2025-03-03 20:34:13 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /flood/stations?stations=3]
+2025-03-03 20:34:15 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /flood/stations?stations=4]
+2025-03-03 20:34:15 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /flood/stations?stations=4]
+2025-03-03 20:34:18 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /flood/stations?stations=5]
+2025-03-03 20:34:18 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /flood/stations?stations=5]
+2025-03-03 20:34:28 - INFO - o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-03 20:34:28 - INFO - o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete

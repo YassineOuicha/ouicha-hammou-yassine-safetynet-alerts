@@ -2,6 +2,7 @@ package com.safetynet.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.annotation.PostConstruct;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.safetynet.repository.DataRepository;
 import org.springframework.core.io.Resource;
@@ -31,6 +32,8 @@ public class DataService {
      * ObjectMapper injected via constructor for JSON parsing.
      */
     private final ObjectMapper objectMapper;
+
+    @Autowired
     public DataService(ObjectMapper objectMapper) {
         this.objectMapper = objectMapper;
     }

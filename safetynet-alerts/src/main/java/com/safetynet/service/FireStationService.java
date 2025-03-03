@@ -18,9 +18,10 @@ import java.util.*;
 @Service
 public class FireStationService {
 
-    @Autowired
+
     private final DataService dataService;
 
+    @Autowired
     public FireStationService(DataService dataService) {
         this.dataService = dataService;
     }
