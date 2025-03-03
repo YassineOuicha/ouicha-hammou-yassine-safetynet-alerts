@@ -11,7 +11,6 @@ import java.util.List;
  */
 @Data @Setter @Getter
 public class MedicalRecord {
-
     private String firstName;
     private String lastName;
     private String birthdate;

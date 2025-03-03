@@ -1,6 +1,7 @@
 package com.safetynet.controller;
 
 import com.safetynet.model.MedicalRecord;
+import com.safetynet.service.BadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.safetynet.service.MedicalRecordService;
@@ -33,12 +34,12 @@ public class MedicalRecordController {
      * @param firstName the first name of the person whose medical record is to be retrieved
      * @param lastName the last name of the person whose medical record is to be retrieved
      * @return the medical record of the person
-     * @throws RuntimeException if the medical record is not found for the given name combination
+     * @throws BadRequestException if the medical record is not found for the given name combination
      */
     @GetMapping("/medicalrecord")
     public MedicalRecord getMedicalRecord(@RequestParam String firstName, @RequestParam String lastName){
         return medicalRecordService.getMedicalRecord(firstName, lastName)
-                .orElseThrow(()-> new RuntimeException("Medical record not found"));
+                .orElseThrow(()-> new BadRequestException("Medical record not found"));
     }
 
     /**

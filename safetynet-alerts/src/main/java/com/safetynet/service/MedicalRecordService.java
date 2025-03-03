@@ -37,7 +37,7 @@ public class MedicalRecordService {
     public MedicalRecord addMedicalRecord(MedicalRecord medicalRecord){
         Optional<MedicalRecord> existingMedicalRecord = getMedicalRecord(medicalRecord.getFirstName(), medicalRecord.getLastName());
         if(existingMedicalRecord.isPresent()){
-            throw new RuntimeException("This medical record exists already");
+            throw new BadRequestException("This medical record already exists");
         }
         getAllMedicalRecords().add(medicalRecord);
         return medicalRecord;
@@ -45,7 +45,7 @@ public class MedicalRecordService {
 
     public boolean updateMedicalRecord(MedicalRecord updatedMedicalRecord){
         MedicalRecord outDatedMedicalRecord = getMedicalRecord(updatedMedicalRecord.getFirstName(), updatedMedicalRecord.getLastName())
-                .orElseThrow(()-> new RuntimeException("Medical record not found"));
+                .orElseThrow(()-> new BadRequestException("Medical record not found"));
         outDatedMedicalRecord.setMedications(updatedMedicalRecord.getMedications());
         outDatedMedicalRecord.setBirthdate(updatedMedicalRecord.getBirthdate());
         outDatedMedicalRecord.setAllergies(updatedMedicalRecord.getAllergies());
