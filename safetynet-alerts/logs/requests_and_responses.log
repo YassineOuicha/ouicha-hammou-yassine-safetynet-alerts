@@ -1,0 +1,242 @@
+2025-03-03 20:52:25 - INFO - c.FireStationControllerTest - Starting FireStationControllerTest using Java 17.0.12 with PID 9512 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:52:25 - INFO - c.FireStationControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:52:32 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:52:32 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:52:32 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:52:32 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 3 ms
+2025-03-03 20:52:33 - INFO - c.FireStationControllerTest - Started FireStationControllerTest in 9.655 seconds (process running for 14.937)
+2025-03-03 20:52:35 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /fire]
+2025-03-03 20:52:36 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /fire]
+2025-03-03 20:52:36 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [PUT /firestation]
+2025-03-03 20:52:36 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: PUT /firestation, payload={"address":"Colmar 68000","station":3}]
+2025-03-03 20:52:36 - INFO - o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-03-03 20:52:36 - INFO - c.FireStationControllerTest - Starting FireStationControllerTest using Java 17.0.12 with PID 9512 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:52:36 - INFO - c.FireStationControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:52:37 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:52:37 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:52:37 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:52:37 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-03-03 20:52:37 - INFO - c.FireStationControllerTest - Started FireStationControllerTest in 1.231 seconds (process running for 19.855)
+2025-03-03 20:52:37 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /flood/stations]
+2025-03-03 20:52:38 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /flood/stations]
+2025-03-03 20:52:38 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /firestation]
+2025-03-03 20:52:38 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /firestation]
+2025-03-03 20:52:38 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [DELETE /firestation]
+2025-03-03 20:52:38 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: DELETE /firestation, payload={"address":"1509 Culver St","station":3}]
+2025-03-03 20:52:38 - INFO - o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-03-03 20:52:38 - INFO - c.FireStationControllerTest - Starting FireStationControllerTest using Java 17.0.12 with PID 9512 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:52:38 - INFO - c.FireStationControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:52:39 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:52:39 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:52:39 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:52:39 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-03-03 20:52:39 - INFO - c.FireStationControllerTest - Started FireStationControllerTest in 1.059 seconds (process running for 21.091)
+2025-03-03 20:52:39 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /firestations]
+2025-03-03 20:52:39 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /firestations]
+2025-03-03 20:52:39 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /firestation]
+2025-03-03 20:52:39 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /firestation, payload={"address":"Colmar 68000","station":5}]
+2025-03-03 20:52:39 - INFO - o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-03-03 20:52:39 - INFO - c.FireStationControllerTest - Starting FireStationControllerTest using Java 17.0.12 with PID 9512 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:52:39 - INFO - c.FireStationControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:52:40 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:52:40 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:52:40 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:52:40 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-03 20:52:40 - INFO - c.FireStationControllerTest - Started FireStationControllerTest in 1.028 seconds (process running for 22.247)
+2025-03-03 20:52:40 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /phoneAlert]
+2025-03-03 20:52:40 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /phoneAlert]
+2025-03-03 20:52:40 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /medicalrecords]
+2025-03-03 20:52:40 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /medicalrecords]
+2025-03-03 20:52:40 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /medicalrecord]
+2025-03-03 20:52:40 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /medicalrecord]
+2025-03-03 20:52:40 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [DELETE /medicalrecord]
+2025-03-03 20:52:40 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: DELETE /medicalrecord]
+2025-03-03 20:52:40 - INFO - o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-03-03 20:52:40 - INFO - c.MedicalRecordControllerTest - Starting MedicalRecordControllerTest using Java 17.0.12 with PID 9512 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:52:40 - INFO - c.MedicalRecordControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:52:41 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:52:41 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:52:41 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:52:41 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-03 20:52:41 - INFO - c.MedicalRecordControllerTest - Started MedicalRecordControllerTest in 0.903 seconds (process running for 23.328)
+2025-03-03 20:52:41 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [PUT /medicalrecord]
+2025-03-03 20:52:41 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: PUT /medicalrecord, payload={"firstName":"Tenley","lastName":"Boyd","birthdate":"06/02/1997","medications":["med2: 50mg","med4: 150 mg"],"allergies":["allergy2","allergy5","allergy6"]}]
+2025-03-03 20:52:41 - INFO - o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-03-03 20:52:41 - INFO - c.MedicalRecordControllerTest - Starting MedicalRecordControllerTest using Java 17.0.12 with PID 9512 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:52:41 - INFO - c.MedicalRecordControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:52:42 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:52:42 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:52:42 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:52:42 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-03 20:52:42 - INFO - c.MedicalRecordControllerTest - Started MedicalRecordControllerTest in 0.816 seconds (process running for 24.194)
+2025-03-03 20:52:42 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /medicalrecord]
+2025-03-03 20:52:42 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /medicalrecord, payload={"firstName":"Yassine","lastName":"Ouicha","birthdate":"06/02/1997","medications":["med1: 100mg","med2: 200 mg"],"allergies":["allergy1","allergy2","allergy3"]}]
+2025-03-03 20:52:42 - INFO - o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-03-03 20:52:42 - INFO - controller.PersonControllerTest - Starting PersonControllerTest using Java 17.0.12 with PID 9512 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:52:42 - INFO - controller.PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:52:43 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:52:43 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:52:43 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:52:43 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-03 20:52:43 - INFO - controller.PersonControllerTest - Started PersonControllerTest in 0.802 seconds (process running for 25.078)
+2025-03-03 20:52:43 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /personInfo]
+2025-03-03 20:52:43 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /personInfo]
+2025-03-03 20:52:43 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /persons]
+2025-03-03 20:52:43 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /persons]
+2025-03-03 20:52:43 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /childAlert]
+2025-03-03 20:52:43 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /childAlert]
+2025-03-03 20:52:43 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [PUT /person]
+2025-03-03 20:52:43 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: PUT /person, payload={"firstName":"Tenley","lastName":"Boyd","address":"Colmar 68000","city":"Colmar","zip":"68000","phone":"0707070707","email":"yassine.ouicha.nc2@gmail.com"}]
+2025-03-03 20:52:43 - INFO - o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-03-03 20:52:43 - INFO - controller.PersonControllerTest - Starting PersonControllerTest using Java 17.0.12 with PID 9512 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:52:43 - INFO - controller.PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:52:44 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:52:44 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:52:44 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:52:44 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2025-03-03 20:52:44 - INFO - controller.PersonControllerTest - Started PersonControllerTest in 0.855 seconds (process running for 26.07)
+2025-03-03 20:52:44 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [DELETE /person]
+2025-03-03 20:52:44 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: DELETE /person]
+2025-03-03 20:52:44 - INFO - o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-03-03 20:52:44 - INFO - controller.PersonControllerTest - Starting PersonControllerTest using Java 17.0.12 with PID 9512 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:52:44 - INFO - controller.PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:52:45 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:52:45 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:52:45 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:52:45 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-03 20:52:45 - INFO - controller.PersonControllerTest - Started PersonControllerTest in 0.899 seconds (process running for 27.016)
+2025-03-03 20:52:45 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /person]
+2025-03-03 20:52:45 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /person, payload={"firstName":"Yassine","lastName":"Ouicha","address":"Colmar 68000","city":"Colmar","zip":"68000","phone":"0707070707","email":"yassine.ouicha.nc2@gmail.com"}]
+2025-03-03 20:52:45 - INFO - o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-03-03 20:52:45 - INFO - controller.PersonControllerTest - Starting PersonControllerTest using Java 17.0.12 with PID 9512 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:52:45 - INFO - controller.PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:52:45 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:52:45 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:52:45 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:52:45 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-03 20:52:45 - INFO - controller.PersonControllerTest - Started PersonControllerTest in 0.754 seconds (process running for 27.807)
+2025-03-03 20:52:45 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /person]
+2025-03-03 20:52:45 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /person]
+2025-03-03 20:52:45 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /communityEmail]
+2025-03-03 20:52:45 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /communityEmail]
+2025-03-03 20:55:50 - INFO - c.FireStationControllerTest - Starting FireStationControllerTest using Java 17.0.12 with PID 7584 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:55:50 - INFO - c.FireStationControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:55:55 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:55:55 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:55:55 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:55:55 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2025-03-03 20:55:55 - INFO - c.FireStationControllerTest - Started FireStationControllerTest in 6.794 seconds (process running for 11.338)
+2025-03-03 20:55:58 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /fire]
+2025-03-03 20:55:58 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /fire]
+2025-03-03 20:55:58 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [PUT /firestation]
+2025-03-03 20:55:58 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: PUT /firestation, payload={"address":"Colmar 68000","station":3}]
+2025-03-03 20:55:58 - INFO - o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-03-03 20:55:58 - INFO - c.FireStationControllerTest - Starting FireStationControllerTest using Java 17.0.12 with PID 7584 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:55:58 - INFO - c.FireStationControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:55:59 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:55:59 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:55:59 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:55:59 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-03 20:55:59 - INFO - c.FireStationControllerTest - Started FireStationControllerTest in 0.855 seconds (process running for 15.248)
+2025-03-03 20:55:59 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /flood/stations]
+2025-03-03 20:55:59 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /flood/stations]
+2025-03-03 20:55:59 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /firestation]
+2025-03-03 20:55:59 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /firestation]
+2025-03-03 20:55:59 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [DELETE /firestation]
+2025-03-03 20:55:59 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: DELETE /firestation, payload={"address":"1509 Culver St","station":3}]
+2025-03-03 20:55:59 - INFO - o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-03-03 20:55:59 - INFO - c.FireStationControllerTest - Starting FireStationControllerTest using Java 17.0.12 with PID 7584 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:55:59 - INFO - c.FireStationControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:56:00 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:56:00 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:56:00 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:56:00 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-03 20:56:00 - INFO - c.FireStationControllerTest - Started FireStationControllerTest in 0.8 seconds (process running for 16.183)
+2025-03-03 20:56:00 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /firestations]
+2025-03-03 20:56:00 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /firestations]
+2025-03-03 20:56:00 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /firestation]
+2025-03-03 20:56:00 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /firestation, payload={"address":"Colmar 68000","station":5}]
+2025-03-03 20:56:00 - INFO - o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-03-03 20:56:00 - INFO - c.FireStationControllerTest - Starting FireStationControllerTest using Java 17.0.12 with PID 7584 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:56:00 - INFO - c.FireStationControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:56:01 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:56:01 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:56:01 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:56:01 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-03 20:56:01 - INFO - c.FireStationControllerTest - Started FireStationControllerTest in 0.783 seconds (process running for 17.063)
+2025-03-03 20:56:01 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /phoneAlert]
+2025-03-03 20:56:01 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /phoneAlert]
+2025-03-03 20:56:01 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /medicalrecords]
+2025-03-03 20:56:01 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /medicalrecords]
+2025-03-03 20:56:01 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /medicalrecord]
+2025-03-03 20:56:01 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /medicalrecord]
+2025-03-03 20:56:01 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [DELETE /medicalrecord]
+2025-03-03 20:56:01 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: DELETE /medicalrecord]
+2025-03-03 20:56:01 - INFO - o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-03-03 20:56:01 - INFO - c.MedicalRecordControllerTest - Starting MedicalRecordControllerTest using Java 17.0.12 with PID 7584 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:56:01 - INFO - c.MedicalRecordControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:56:02 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:56:02 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:56:02 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:56:02 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-03 20:56:02 - INFO - c.MedicalRecordControllerTest - Started MedicalRecordControllerTest in 1.031 seconds (process running for 18.307)
+2025-03-03 20:56:02 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [PUT /medicalrecord]
+2025-03-03 20:56:02 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: PUT /medicalrecord, payload={"firstName":"Tenley","lastName":"Boyd","birthdate":"06/02/1997","medications":["med2: 50mg","med4: 150 mg"],"allergies":["allergy2","allergy5","allergy6"]}]
+2025-03-03 20:56:02 - INFO - o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-03-03 20:56:02 - INFO - c.MedicalRecordControllerTest - Starting MedicalRecordControllerTest using Java 17.0.12 with PID 7584 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:56:02 - INFO - c.MedicalRecordControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:56:03 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:56:03 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:56:03 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:56:03 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-03 20:56:03 - INFO - c.MedicalRecordControllerTest - Started MedicalRecordControllerTest in 0.872 seconds (process running for 19.223)
+2025-03-03 20:56:03 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /medicalrecord]
+2025-03-03 20:56:03 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /medicalrecord, payload={"firstName":"Yassine","lastName":"Ouicha","birthdate":"06/02/1997","medications":["med1: 100mg","med2: 200 mg"],"allergies":["allergy1","allergy2","allergy3"]}]
+2025-03-03 20:56:03 - INFO - o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-03-03 20:56:03 - INFO - controller.PersonControllerTest - Starting PersonControllerTest using Java 17.0.12 with PID 7584 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:56:03 - INFO - controller.PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:56:04 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:56:04 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:56:04 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:56:04 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-03 20:56:04 - INFO - controller.PersonControllerTest - Started PersonControllerTest in 0.665 seconds (process running for 19.974)
+2025-03-03 20:56:04 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /personInfo]
+2025-03-03 20:56:04 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /personInfo]
+2025-03-03 20:56:04 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /persons]
+2025-03-03 20:56:04 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /persons]
+2025-03-03 20:56:04 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /childAlert]
+2025-03-03 20:56:04 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /childAlert]
+2025-03-03 20:56:04 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [PUT /person]
+2025-03-03 20:56:04 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: PUT /person, payload={"firstName":"Tenley","lastName":"Boyd","address":"Colmar 68000","city":"Colmar","zip":"68000","phone":"0707070707","email":"yassine.ouicha.nc2@gmail.com"}]
+2025-03-03 20:56:04 - INFO - o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-03-03 20:56:04 - INFO - controller.PersonControllerTest - Starting PersonControllerTest using Java 17.0.12 with PID 7584 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:56:04 - INFO - controller.PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:56:04 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:56:04 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:56:04 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:56:04 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-03 20:56:04 - INFO - controller.PersonControllerTest - Started PersonControllerTest in 0.684 seconds (process running for 20.78)
+2025-03-03 20:56:04 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [DELETE /person]
+2025-03-03 20:56:04 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: DELETE /person]
+2025-03-03 20:56:04 - INFO - o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-03-03 20:56:05 - INFO - controller.PersonControllerTest - Starting PersonControllerTest using Java 17.0.12 with PID 7584 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:56:05 - INFO - controller.PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:56:05 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:56:05 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:56:05 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:56:05 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-03 20:56:05 - INFO - controller.PersonControllerTest - Started PersonControllerTest in 0.65 seconds (process running for 21.459)
+2025-03-03 20:56:05 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [POST /person]
+2025-03-03 20:56:05 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: POST /person, payload={"firstName":"Yassine","lastName":"Ouicha","address":"Colmar 68000","city":"Colmar","zip":"68000","phone":"0707070707","email":"yassine.ouicha.nc2@gmail.com"}]
+2025-03-03 20:56:05 - INFO - o.s.b.d.r.RestartApplicationListener - Restart disabled due to context in which it is running
+2025-03-03 20:56:05 - INFO - controller.PersonControllerTest - Starting PersonControllerTest using Java 17.0.12 with PID 7584 (started by User in C:\Users\User\OneDrive\Desktop\Y.Ouicha\OpenClassrooms\Projet_N5\ouicha-hammou-yassine-safetynet-alerts\safetynet-alerts)
+2025-03-03 20:56:05 - INFO - controller.PersonControllerTest - No active profile set, falling back to 1 default profile: "default"
+2025-03-03 20:56:06 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Filter 'logFilter' configured for use
+2025-03-03 20:56:06 - INFO - o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2025-03-03 20:56:06 - INFO - o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2025-03-03 20:56:06 - INFO - o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2025-03-03 20:56:06 - INFO - controller.PersonControllerTest - Started PersonControllerTest in 0.59 seconds (process running for 22.089)
+2025-03-03 20:56:06 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /person]
+2025-03-03 20:56:06 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /person]
+2025-03-03 20:56:06 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - Before request [GET /communityEmail]
+2025-03-03 20:56:06 - DEBUG - o.s.w.f.CommonsRequestLoggingFilter - REQUEST DATA: GET /communityEmail]
