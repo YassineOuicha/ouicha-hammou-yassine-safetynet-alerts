@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.safetynet.repository.DataRepository;
 
+
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
@@ -133,7 +134,7 @@ public class PersonService {
     public Person addPerson(Person person){
         Optional<Person> existingPerson = getPerson(person.getFirstName(), person.getLastName());
         if(existingPerson.isPresent()){
-            throw new RuntimeException("This person already exists");
+            throw new BadRequestException("This person already exists");
         }
         dataService.getData().getPersons().add(person);
         return person;
@@ -141,7 +142,7 @@ public class PersonService {
 
     public boolean updatePerson (Person updatedPerson){
         Person outDatedPerson = getPerson(updatedPerson.getFirstName(), updatedPerson.getLastName())
-                .orElseThrow(() -> new RuntimeException("Person not found"));
+                .orElseThrow(() -> new BadRequestException("Person not found"));
         outDatedPerson.setAddress(updatedPerson.getAddress());
         outDatedPerson.setCity(updatedPerson.getCity());
         outDatedPerson.setPhone(updatedPerson.getPhone());

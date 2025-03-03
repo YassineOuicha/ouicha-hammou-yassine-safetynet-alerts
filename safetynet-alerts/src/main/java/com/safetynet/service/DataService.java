@@ -4,8 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
 import com.safetynet.repository.DataRepository;
-
-import java.io.File;
+import org.springframework.core.io.Resource;
+import org.springframework.beans.factory.annotation.Value;
 import java.io.IOException;
 
 /**
@@ -22,6 +22,12 @@ public class DataService {
     private DataRepository dataRepository;
 
     /**
+     * Resource file for data.json.
+     */
+    @Value("classpath:data.json")
+    private Resource resourceFile;
+
+    /**
      * Method that is executed after the construction of the beans. It loads data
      * from a data.json file and initializes the dataRepository.
      * The data is stored into the dataRepository using Jackson's ObjectMapper.
@@ -30,8 +36,7 @@ public class DataService {
     public void LoadData(){
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            File file  = new File("C:/Users/User/OneDrive/Desktop/Y.Ouicha/OpenClassrooms/Projet_N5/ouicha-hammou-yassine-safetynet-alerts/safetynet-alerts/src/main/resources/data.json");
-            dataRepository = objectMapper.readValue(file, DataRepository.class);
+            dataRepository = objectMapper.readValue(resourceFile.getFile(), DataRepository.class);
             System.out.println("JSON Data has been uploaded successfully");
         } catch (IOException e) {
             System.err.println("Error while loading data.json : " + e.getMessage());

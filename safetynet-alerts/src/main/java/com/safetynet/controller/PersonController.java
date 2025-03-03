@@ -3,6 +3,7 @@ package com.safetynet.controller;
 import com.safetynet.model.ChildAlertDTO;
 import com.safetynet.model.Person;
 import com.safetynet.model.PersonInfoDTO;
+import com.safetynet.service.BadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.safetynet.service.PersonService;
@@ -31,12 +32,12 @@ public class PersonController {
      * @param firstName the first name of the person to retrieve
      * @param lastName the last name of the person to retrieve
      * @return the person's détails, corresponding to the provided first and last name
-     * @throws RuntimeException if the person is not found
+     * @throws BadRequestException if the person is not found
      */
     @GetMapping ("/person")
     public Person getPerson(@RequestParam String firstName, @RequestParam String lastName){
         return personService.getPerson(firstName, lastName)
-                .orElseThrow(()-> new RuntimeException("Person not found"));
+                .orElseThrow(()-> new BadRequestException("Person not found"));
     }
 
     /**

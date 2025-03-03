@@ -4,6 +4,7 @@ import com.safetynet.model.FireDTO;
 import com.safetynet.model.FireStation;
 import com.safetynet.model.FireStationDTO;
 import com.safetynet.model.PersonFireStationDTO;
+import com.safetynet.service.BadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.safetynet.service.FireStationService;
@@ -35,12 +36,12 @@ public class FireStationController {
      *
      * @param stationNumber the number of the fire station to retrieve
      * @return the fire station information
-     * @throws RuntimeException if the fire station is not found
+     * @throws BadRequestException if the fire station is not found
      */
     @GetMapping ("/firestation/{stationNumber}")
     public FireStation getFireStation(@RequestParam int stationNumber){
         return fireStationService.getFireStation(stationNumber)
-                .orElseThrow(()-> new RuntimeException("Fire Station not found"));
+                .orElseThrow(()-> new BadRequestException("Fire Station not found for station number: " + stationNumber));
     }
 
     /**

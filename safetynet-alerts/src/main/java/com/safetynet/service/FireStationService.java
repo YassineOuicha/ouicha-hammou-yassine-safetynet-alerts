@@ -39,7 +39,7 @@ public class FireStationService {
         FireStation fireStation = getAllFireStations().stream()
                 .filter(fs -> fs.getStation() == stationNumber)
                 .findFirst()
-                .orElseThrow(()-> new RuntimeException("Fire station wanted doesn't exits"));
+                .orElseThrow(()-> new BadRequestException("Fire station wanted doesn't exist" + stationNumber));
 
         PersonFireStationDTO dto = new PersonFireStationDTO();
 
@@ -57,7 +57,7 @@ public class FireStationService {
                     .filter(mr-> mr.getFirstName().equalsIgnoreCase(p.getFirstName())
                     && mr.getLastName().equalsIgnoreCase(p.getLastName()))
                     .findFirst()
-                    .orElseThrow(()-> new RuntimeException("No medical record found for the person: "
+                    .orElseThrow(()-> new BadRequestException("No medical record found for the person: "
                             + p.getFirstName() + " " + p.getLastName()));
 
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
@@ -102,7 +102,7 @@ public class FireStationService {
                             .filter(fs-> fs.getAddress().equalsIgnoreCase(address))
                             .map(FireStation::getStation)
                             .findFirst()
-                            .orElseThrow(()-> new RuntimeException("No fire station found for this address"));
+                            .orElseThrow(()-> new BadRequestException("No fire station found for this address" + address));
 
         fireDTO.setStationNumber(stationNumber);
 
@@ -164,7 +164,7 @@ public class FireStationService {
     public FireStation addFireStation(FireStation fireStation){
         Optional<FireStation> existingFireStation = getFireStation(fireStation.getStation());
         if(existingFireStation.isPresent()){
-            throw new RuntimeException("This FireStation exists already");
+            throw new BadRequestException( "This FireStation already exists");
         }
         dataService.getData().getFirestations().add(fireStation);
         return fireStation;
@@ -172,7 +172,7 @@ public class FireStationService {
 
     public boolean updateFireStation(FireStation updatedFireStation){
         FireStation oldFireStation = getFireStation(updatedFireStation.getStation())
-                .orElseThrow(()-> new RuntimeException("Fire Station doesn't exists"));
+                .orElseThrow(()-> new BadRequestException("Fire Station doesn't exist"));
         oldFireStation.setStation(updatedFireStation.getStation());
         oldFireStation.setAddress(updatedFireStation.getAddress());
         return true;
